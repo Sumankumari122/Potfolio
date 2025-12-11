@@ -1,0 +1,178 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+.main-header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  text-align: center;
+  color: white;
+  padding: 60px 20px 80px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ===== Navbar ===== */
+nav {
+  background: #1e1e2e;
+  padding: 12px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #2575fc;
+}
+
+/* ===== Section Boxes ===== */
+.accordion {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  padding: 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  cursor: pointer;
+}
+
+.accordion-content {
+  background-color: #fafafa;
+  padding: 25px;
+}
+
+/* ===== About Section ===== */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.photo {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+}
+.photo:hover { transform: scale(1.05); }
+
+.about-text { max-width: 500px; }
+.about-text h3 { color: #2575fc; margin-bottom: 10px; font-size: 24px; }
+.about-text span { color: #111; font-weight: 600; }
+.about-info li { margin-bottom: 8px; }
+
+.about-buttons .btn {
+  display: inline-block;
+  background: #6a11cb;
+  color: #fff;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.about-buttons .btn:hover { background: #2575fc; }
+.btn-alt { background: #444; }
+.btn-alt:hover { background: #666; }
+
+/* ===== Portfolio Section ===== */
+#portfolio {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f4f6fb;
+}
+
+#portfolio h2 {
+  color: #4a90e2;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 220px;
+  transition: all 0.3s ease;
+  border-top: 5px solid #6a11cb;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  background: #1e1e2e;
+  color: white;
+  padding: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .about-container { flex-direction: column; text-align: center; }
+  .main-header h1 { font-size: 1.8rem; }
+  .project-card { width: 90%; }
+}
